@@ -72,6 +72,7 @@ const ContentStyle = styled.div`
 }
 `;
 
+
 const Home = () => {
     return (
         <ContentStyle>
