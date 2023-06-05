@@ -7,12 +7,21 @@ import img5 from '../../assets/img5.svg';
 import { Col, Row } from 'antd';
 
 const ContentStyle = styled.div`
-width: 1320px;
+    width: 1320px;
     margin: 0 auto;
+    .transformp {
+    transform: rotate(-90deg);
+    position: absolute;
+    font-size:39px ;
+    line-height: 42px;
+    top: 34%;
+    left: -42%;
+}
 `;
 
-export const Content = () => {
-    <ContentStyle>
+ const Content = () => {
+    return(
+        <ContentStyle>
         <Row gutter={16}>
             <Col className="gutter-row " style={{ position: 'relative' }} span={12}>
                 <img src={img4} alt="" />
@@ -36,5 +45,8 @@ export const Content = () => {
             </Col>
         </Row>
     </ContentStyle>
-
+    )
+   
 }
+
+export default Content;

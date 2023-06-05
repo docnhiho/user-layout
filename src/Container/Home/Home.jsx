@@ -4,19 +4,14 @@ import brand2 from '../../assets/02.svg';
 import brand3 from '../../assets/03.svg';
 import brand4 from '../../assets/04.svg';
 import brand5 from '../../assets/05.svg';
-import img1 from '../../assets/img1.svg';
-import img2 from '../../assets/img2.svg';
-import img3 from '../../assets/img3.svg';
-import img4 from '../../assets/img4.svg';
-import img5 from '../../assets/img5.svg';
 import pro1 from '../../assets/product1.svg';
 import pro2 from '../../assets/product2.svg';
 import pro3 from '../../assets/product3.svg';
 import pro4 from '../../assets/product4.svg';
 
 import filter from '../../assets/filter.svg';
-
-
+import Content from '../../Component/Content';
+import Product from '../../Component/Product';
 import { Col, Row, Space } from 'antd';
 import { NavLink } from 'react-router-dom';
 
@@ -30,26 +25,13 @@ const ContentStyle = styled.div`
     display: flex;
     justify-content: space-between;
 }
-.content{
+
+`;
+const GridProduct = styled.div`
     width: 1320px;
     margin: 0 auto;
 
-}
-.transformp {
-    transform: rotate(-90deg);
-    position: absolute;
-    font-size:39px ;
-    line-height: 42px;
-    top: 34%;
-    left: -42%;
-}
-
-.grid-product{
-    width: 1320px;
-    margin: 0 auto;
-}
-
-.grid-product p{
+ .subscribe {
     font-size: 50px;
     line-height: 59px;
 }
@@ -61,7 +43,7 @@ const ContentStyle = styled.div`
     margin-right: 40px;
 
 }
-.grid-product button {
+button {
     width: 92px;
     height: 32px;
     background-color: black;
@@ -83,34 +65,9 @@ const Home = () => {
                 <img src={brand4} alt=''></img>
                 <img src={brand5} alt=''></img>
             </div>
-
-            <div className="content">
-                <Row gutter={16}>
-                    <Col className="gutter-row " style={{ position: 'relative' }} span={12}>
-                        <img src={img4} alt="" />
-                        <p className='transformp'>Explore new and popular styles</p>
-                    </Col>
-                    <Col className="gutter-row" span={12}>
-                        <Row gutter={[16, 24]}>
-                            <Col className="gutter-row" span={12}>
-                                <img src={img1} alt="" />
-                            </Col>
-                            <Col className="gutter-row" span={12}>
-                                <img src={img2} alt="" />
-                            </Col>
-                            <Col className="gutter-row" span={12}>
-                                <img src={img3} alt="" />
-                            </Col>
-                            <Col className="gutter-row" span={12}>
-                                <img src={img5} alt="" />
-                            </Col>
-                        </Row>
-                    </Col>
-                </Row>
-            </div>
-
-            <div className="grid-product">
-                <p>Or subscribe to the newsletter</p>
+            <Content></Content>
+            <GridProduct>
+                <p className='subscribe'>Or subscribe to the newsletter</p>
                 <nav className='nav-menu'>
                     <NavLink to="/" className="list-group-item">All products</NavLink>
                     <NavLink to="/" className="list-group-item">T-Shirt</NavLink>
@@ -124,31 +81,17 @@ const Home = () => {
                 <div className="product">
                     <Space>
                         <Row gutter={[16, 24]}>
-                            <Col className="gutter-row" span={6}>
-                                <img src={pro1} alt="" />    
-                                <p>Adicolor Classics Joggers</p>
-                                <div>
-                                    <p>Dress</p>
-                                    <p>$63.85</p>
-                                </div>
-                            </Col>
-                            <Col className="gutter-row" span={6}>
-                                <img src={pro2} alt="" />
-                                <div>col-6</div>
-                            </Col>
-                            <Col className="gutter-row" span={6}>
-                                <img src={pro3} alt="" />
-                                <div>col-6</div>
-                            </Col>
-                            <Col className="gutter-row" span={6}>
-                                <img src={pro4} alt="" />
-                                <div>col-6</div>
-                            </Col>
+                            <Product image={pro1} name={"Nike Repel Milssssssssssssssser"} category={"Dress"} price={63.85} />
+                            <Product image={pro1} name={"Nike Repel Miler"} category={"Dress"} price={63.85} />
+                            <Product image={pro1} name={"Nike Repel Miler"} category={"Dress"} price={63.85} />
+                            <Product image={pro1} name={"Nike Repel Miler"} category={"Dress"} price={63.85} />
+                          
                         </Row>
                     </Space>
-
                 </div>
-            </div>
+
+            </GridProduct>
+
         </ContentStyle>
     )
 }
