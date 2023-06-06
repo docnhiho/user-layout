@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import sreach from '../../assets/sreach.svg';
 import { ReactComponent as Account} from '../../assets/account.svg';
-
 import { ReactComponent as Shoping } from '../../assets/shoping.svg';
 import imageproduct from '../../assets/image-product.svg'
 
@@ -21,7 +20,7 @@ const HeaderStyle = styled.div`
     .shop{
          path{
             fill: white 
-        }
+    }
     }
     .topheader span{
         padding: 12px;
