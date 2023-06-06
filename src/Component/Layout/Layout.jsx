@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import styled from 'styled-components';
 import Headerr from '../Headerr/Headerr';
 import Home from '../../Container/Home/index'
-
+import Footerr from '../Footerr/Footerr';
 
 const { Header, Footer, Content } = Layout;
 const headerStyle = {
@@ -37,7 +37,8 @@ const PrimaryLayout = () => {
                 {/* <Outlet></Outlet> */}
                 <Home></Home>
             </Content>
-            <Footer style={footerStyle}>Footer</Footer>
+            <Footer style={footerStyle}>
+            </Footer>
         </Layout>
     )
 

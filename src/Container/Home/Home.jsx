@@ -166,20 +166,19 @@ const Home = () => {
                     </button>
                 </nav>
                 <div className="product">
-                    <Space>
+                    {/* <Space>
                         <Row gutter={[16, 24]}>
                             <Product image={pro1} name={"Nike Repel Milssssssssssssssser"} category={"Dress"} price={63.85} />
                             <Product image={pro2} name={"Nike Repel Miler"} category={"Dress"} price={63.85} />
                             <Product image={pro3} name={"Nike Repel Miler"} category={"Dress"} price={63.85} />
                             <Product image={pro4} name={"Nike Repel Miler"} category={"Dress"} price={63.85} />
                         </Row>
-                    </Space>
+                    </Space> */}
                     <MultipleItems></MultipleItems>
                 </div>
             </GridProduct>
             <NewletterStyled>
                 <Newsletter></Newsletter>
-                
             </NewletterStyled>
         </ContentStyle>
     )
